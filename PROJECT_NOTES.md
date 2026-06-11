@@ -50,6 +50,7 @@ Then open http://localhost:3000 (or whatever port it prints).
 Output goes to the `out/` folder (contains index.html).
 
 ## Deploy
+- LIVE SITE: https://hanuman-printers.vercel.app/
 - GitHub repo: https://github.com/ashu9102007/hanuman-printers
 - Hosted on Vercel (auto-redeploys when you push to GitHub).
 - To update the live site: commit changes, then `git push`.
