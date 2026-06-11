@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1a0f02;
+  --foreground: #fff7e6;
+  --saffron: #ff7a00;
+  --gold: #ffb627;
+  --deep: #2a1505;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-saffron: var(--saffron);
+  --color-gold: var(--gold);
+  --color-deep: var(--deep);
+  --font-sans: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Warm radial glow used behind sections */
+.glow-saffron {
+  background: radial-gradient(
+    circle at 50% 30%,
+    rgba(255, 122, 0, 0.28),
+    rgba(255, 122, 0, 0) 60%
+  );
+}
+
+/* Subtle gold gradient text */
+.text-gradient-gold {
+  background: linear-gradient(120deg, #ffb627 0%, #ff7a00 50%, #ffd970 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1a0f02;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ff7a00, #ffb627);
+  border-radius: 8px;
 }
